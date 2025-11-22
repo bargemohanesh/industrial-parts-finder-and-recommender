@@ -2,7 +2,7 @@
 
 
 
-AI-powered semantic search for industrial parts catalogs using RAG (Retrieval Augmented Generation).
+AI-powered semantic search and recommendation system for industrial parts catalogs using RAG (Retrieval Augmented Generation).
 
 
 
@@ -202,7 +202,7 @@ Open browser: http://localhost:8000
 
 ```
 
-industrial-parts-finder/
+# Industrial Parts Product Finder & Recommender/
 
 ├── backend/
 
