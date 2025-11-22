@@ -1,0 +1,32 @@
+# Credentials
+.env
+*.env
+config.local.py
+
+# Data files (may contain proprietary info)
+*.pdf
+*.csv
+data/
+cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Processed data
+data/processed/

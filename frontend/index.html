@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Parts Finder - AI-Powered Catalog Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-search-plus"></i>
+                    <h1>Industrial Parts Finder</h1>
+                </div>
+                <div class="status-indicator" id="status-indicator">
+                    <div class="status-dot"></div>
+                    <span id="status-text">Initializing...</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section" id="welcome-section">
+                <div class="welcome-card">
+                    <div class="welcome-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h2>Welcome to Industrial Parts Finder</h2>
+                    <p>AI-powered search across industrial parts catalogs. Find exactly what you need using natural language.</p>
+
+                    <div class="catalog-info">
+                        <div class="catalog-badge">
+                            <i class="fas fa-tag"></i>
+                            <span>Labels & Signs</span>
+                        </div>
+                        <div class="catalog-badge">
+                            <i class="fas fa-tools"></i>
+                            <span>Handling Equipment</span>
+                        </div>
+                    </div>
+
+                    <div class="quick-examples">
+                        <h3>Try these searches:</h3>
+                        <div class="example-buttons">
+                            <button class="example-btn" data-query="safety warning label for forklift">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Safety Warning Labels
+                            </button>
+                            <button class="example-btn" data-query="fire safety signs">
+                                <i class="fas fa-fire-extinguisher"></i>
+                                Fire Safety Signs
+                            </button>
+                            <button class="example-btn" data-query="electrical hazard warning">
+                                <i class="fas fa-bolt"></i>
+                                Electrical Hazard
+                            </button>
+                            <button class="example-btn" data-query="forklift attachments">
+                                <i class="fas fa-forklift"></i>
+                                Forklift Attachments
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="init-button" id="init-button">
+                        <i class="fas fa-rocket"></i>
+                        Initialize System
+                    </button>
+                    <div class="init-progress" id="init-progress">
+                        <div class="spinner"></div>
+                        <p id="init-status">Initializing system...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Search Section -->
+            <section class="search-section" id="search-section" style="display: none;">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Describe what you're looking for... (e.g., 'safety warning label for electrical equipment')"
+                            maxlength="500"
+                        >
+                        <button class="voice-btn" id="voice-btn" title="Voice Search">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button class="search-btn" id="search-btn">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="search-info">
+                        <span class="char-counter" id="char-counter">0/500</span>
+                        <span class="voice-status" id="voice-status"></span>
+                    </div>
+                </div>
+
+                <!-- Results Area -->
+                <div class="results-container" id="results-container">
+                    <!-- Results will be injected here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner large"></div>
+            <p id="loading-text">Searching products...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-info-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Industrial Parts Finder - RAG-based Product Search Demo</p>
+            <p class="footer-links">
+                <a href="#" id="about-link">About</a> |
+                <a href="#" id="help-link">Help</a> |
+                <a href="/docs" target="_blank">API Docs</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
